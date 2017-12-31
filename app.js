@@ -56,14 +56,16 @@ decoder.channelA.watch((err, value) => {
 });
 
 home.watch((err, value) => {
-	console.log('COUNT:', count);
-	count = 0;
+	if (value == 1) {
+		console.log('COUNT:', count);
+		count = 0;
 
-	motor.brake()
-		.then(() => timeout(100))
-		.then(() => motor.reset())
-		.then(() => timeout(3000))
-		.then(() => motor.forward());
+		motor.brake()
+			.then(() => timeout(100))
+			.then(() => motor.reset())
+			.then(() => timeout(3000))
+			.then(() => motor.forward());
+	}
 });
 
 motor.forward();
