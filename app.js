@@ -61,7 +61,9 @@ home.watch((err, value) => {
 
 	motor.brake()
 		.then(() => timeout(100))
-		.then(() => motor.reset());
+		.then(() => motor.reset())
+		.then(() => timeout(3000))
+		.then(() => motor.forward());
 });
 
 motor.forward();
