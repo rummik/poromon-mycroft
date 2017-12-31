@@ -22,7 +22,8 @@
       "ref": "origin/master",
       "repo": "/home/pi/pi-poromon-furby.git",
       "path": "/home/pi/pi-poromon-furby",
-      "post-deploy": "export PATH=$PATH:/opt/nodejs/bin; npm install; pm2 startOrRestart package.json --env testing"
+      "post-deploy": "export PATH=$PATH:/opt/nodejs/bin; npm install; pm2 startOrRestart package.json --env testing",
+      "post-setup": "export PATH=$PATH:/opt/nodejs/bin; npm install; pm2 startOrRestart package.json --env testing"
     }
   }
 }
