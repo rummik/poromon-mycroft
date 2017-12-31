@@ -8,7 +8,7 @@ const timeout = pify((timeout, cb) => setTimeout(cb, timeout));
 const home = new GPIO(16, 'in', 'both');
 
 const decoder = {
-	channelA: new GPIO(19, 'in', 'both'),
+	channelA: new GPIO(20, 'in', 'both'),
 	channelB: new GPIO(21, 'in', 'both'),
 };
 
