@@ -15,7 +15,7 @@ const decoder = {
 const motor = new class Motor {
 	constructor() {
 		this.hbridge = {
-			inA: pify(new GPIO(19, 'out'), conf),
+			inA: pify(new GPIO(6, 'out'), conf),
 			inB: pify(new GPIO(26, 'out'), conf),
 		};
 
