@@ -8,13 +8,15 @@
   },
   "author": "Kimberly Zick (rummik) <k@9k1.us>",
   "license": "MPL",
-  "apps": [{
-    "name": "poromon",
-    "script": "app.js",
-    "env": {
-      "NODE_ENV": "development"
+  "apps": [
+    {
+      "name": "poromon",
+      "script": "app.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
     }
-  }],
+  ],
   "deploy": {
     "testing": {
       "user": "pi",
@@ -25,5 +27,8 @@
       "post-deploy": "export PATH=$PATH:/opt/nodejs/bin; npm install; pm2 startOrRestart package.json --env testing",
       "post-setup": "export PATH=$PATH:/opt/nodejs/bin; npm install; pm2 startOrRestart package.json --env testing"
     }
+  },
+  "dependencies": {
+    "onoff": "^1.1.9"
   }
 }
