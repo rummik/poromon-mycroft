@@ -1,0 +1,28 @@
+{
+  "name": "pi-poromon-furby",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kimberly Zick (rummik) <k@9k1.us>",
+  "license": "MPL",
+  "apps": [{
+    "name": "poromon",
+    "script": "app.js",
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }],
+  "deploy": {
+    "testing": {
+      "user": "pi",
+      "host": "2001:db8::d00:dad",
+      "ref": "origin/master",
+      "repo": "/home/pi/pi-poromon-furby.git",
+      "path": "/home/pi/pi-poromon-furby",
+      "post-deploy": "export PATH=$PATH:/opt/nodejs/bin; npm install; authbind --deep pm2 startOrRestart app.config.js --env testing"
+    }
+  }
+}
