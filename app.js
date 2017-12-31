@@ -56,7 +56,7 @@ decoder.channelA.watch((err, value) => {
 });
 
 home.watch((err, value) => {
-	if (value == 0) {
+	if (value == 1) {
 		console.log('COUNT:', count);
 		count = 0;
 
