@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kimberly Zick (rummik) <k@9k1.us>",
-  "license": "MPL",
+  "license": "MPL-2.0",
   "apps": [
     {
       "name": "poromon",
@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "furby": "github:rummik/node-furby",
     "lodash": "^4.17.4",
     "onoff": "^1.1.9",
     "pify": "^3.0.0"
