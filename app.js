@@ -1,3 +1,3 @@
-const Furby = require('./lib/furby');
+const Furby = require('furby');
 
 new Furby();
